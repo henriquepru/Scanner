@@ -45,7 +45,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdV-Eg-fi1">
                                         <rect key="frame" x="37.5" y="32" width="300" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="XSF-ch-CJE"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="XSF-ch-CJE"/>
                                             <constraint firstAttribute="height" constant="40" id="zMq-b1-dZ7"/>
                                         </constraints>
                                         <nil key="textColor"/>
@@ -55,7 +55,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfZ-6U-r3u">
                                         <rect key="frame" x="37.5" y="88" width="300" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="IxW-sS-9WQ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="IxW-sS-9WQ"/>
                                             <constraint firstAttribute="height" constant="40" id="NNt-lt-9D7"/>
                                         </constraints>
                                         <nil key="textColor"/>
@@ -66,7 +66,7 @@
                                         <rect key="frame" x="162" y="160" width="50" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="e3Z-Mn-aDz"/>
-                                            <constraint firstAttribute="width" constant="50" id="nhH-Dg-kpr"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="nhH-Dg-kpr"/>
                                         </constraints>
                                         <state key="normal" title="Entrar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -135,7 +135,46 @@
                     <view key="view" contentMode="scaleToFill" id="3ZX-0P-LCp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Eg-fl-TSS">
+                                <rect key="frame" x="37.5" y="313.5" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vii-HH-IAD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="sWt-d6-fn4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Bn-rT-aKY">
+                                <rect key="frame" x="37.5" y="369.5" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="CTb-I7-j8G"/>
+                                    <constraint firstAttribute="height" constant="40" id="dex-JX-XRJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-2A-GPN">
+                                <rect key="frame" x="153.5" y="473.5" width="68" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="v8J-Zd-uld"/>
+                                </constraints>
+                                <state key="normal" title="Cadastrar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dX2-2A-GPN" firstAttribute="centerX" secondItem="3ZX-0P-LCp" secondAttribute="centerX" id="5jl-1I-etI"/>
+                            <constraint firstItem="2Bn-rT-aKY" firstAttribute="top" secondItem="1Eg-fl-TSS" secondAttribute="bottom" constant="16" id="6Ra-mH-gQK"/>
+                            <constraint firstItem="2Bn-rT-aKY" firstAttribute="centerX" secondItem="3ZX-0P-LCp" secondAttribute="centerX" id="BZp-o7-XGu"/>
+                            <constraint firstItem="1Eg-fl-TSS" firstAttribute="centerX" secondItem="3ZX-0P-LCp" secondAttribute="centerX" id="ZWh-il-w0d"/>
+                            <constraint firstItem="dX2-2A-GPN" firstAttribute="top" secondItem="2Bn-rT-aKY" secondAttribute="bottom" constant="64" id="ap9-QI-SDm"/>
+                            <constraint firstItem="1Eg-fl-TSS" firstAttribute="centerY" secondItem="3ZX-0P-LCp" secondAttribute="centerY" id="xF0-03-EL4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="u45-y2-yW4"/>
                     </view>
                 </viewController>
