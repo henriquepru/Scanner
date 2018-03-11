@@ -18,6 +18,7 @@ struct LoginLocalService: LoginService {
                password: String,
                completion: @escaping ((ServiceResponse<User>) -> ())) {
         
-        completion(.error(.fetchError))
+        let user = User(id: 1, userName: "henrique", password: "!@#!@#!@#")
+        completion(.success(user))
     }
 }

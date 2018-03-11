@@ -20,7 +20,21 @@ class LoginViewController: UIViewController {
     
     var output: LoginViewControllerOutPut?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        output?.login(username: "", password: "")
+    }
+}
+
+extension LoginViewController {
+    
     func displayError(errorMessage: String) {
         
     }
+    
+    func displayLogin() {
+        
+    }
 }
+
+

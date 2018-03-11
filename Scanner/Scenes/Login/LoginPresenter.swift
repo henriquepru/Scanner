@@ -10,6 +10,7 @@ import Foundation
 
 protocol LoginPresenterOutput: class {
     func displayError(errorMessage: String)
+    func displayLogin()
 }
 
 struct LoginPresenter {
@@ -25,6 +26,6 @@ struct LoginPresenter {
     }
     
     func login() {
-        
+        output?.displayLogin()
     }
 }
