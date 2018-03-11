@@ -17,6 +17,11 @@
 		D5CCEDD62054BEEB00BE355B /* Scanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5CCEDD52054BEEB00BE355B /* Scanner.storyboard */; };
 		D5CCEDDA2054C31800BE355B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCEDD92054C31800BE355B /* LoginViewController.swift */; };
 		D5CCEDDD2054C45200BE355B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCEDDC2054C45200BE355B /* User.swift */; };
+		D5CCEDE02054C5D600BE355B /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCEDDF2054C5D600BE355B /* LoginService.swift */; };
+		D5CCEDE22054C74400BE355B /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCEDE12054C74400BE355B /* ServiceResponse.swift */; };
+		D5CCEDE62054CAE200BE355B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCEDE52054CAE200BE355B /* LoginPresenter.swift */; };
+		D5CCEDE82054CEB600BE355B /* LoginIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCEDE72054CEB600BE355B /* LoginIteractor.swift */; };
+		D5CCEDEA2054D47D00BE355B /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CCEDE92054D47D00BE355B /* LoginConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,11 @@
 		D5CCEDD52054BEEB00BE355B /* Scanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scanner.storyboard; sourceTree = "<group>"; };
 		D5CCEDD92054C31800BE355B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D5CCEDDC2054C45200BE355B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D5CCEDDF2054C5D600BE355B /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		D5CCEDE12054C74400BE355B /* ServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
+		D5CCEDE52054CAE200BE355B /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		D5CCEDE72054CEB600BE355B /* LoginIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginIteractor.swift; sourceTree = "<group>"; };
+		D5CCEDE92054D47D00BE355B /* LoginConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
 		F7C7DBC0F6F8394BA4CB2238 /* Pods-Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Scanner/Pods-Scanner.debug.xcconfig"; sourceTree = "<group>"; };
 		FBC6C1AE52A1DE3A41ABCA50 /* Pods-ScannerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScannerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScannerTests/Pods-ScannerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +123,7 @@
 		D5CCEDB42054B56600BE355B /* Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				D5CCEDDE2054C5B800BE355B /* Services */,
 				D5CCEDDB2054C44400BE355B /* Models */,
 				D5CCEDD72054C2B400BE355B /* Scenes */,
 				D5CCEDB52054B56600BE355B /* AppDelegate.swift */,
@@ -145,7 +156,10 @@
 		D5CCEDD82054C2D600BE355B /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				D5CCEDE52054CAE200BE355B /* LoginPresenter.swift */,
+				D5CCEDE72054CEB600BE355B /* LoginIteractor.swift */,
 				D5CCEDD92054C31800BE355B /* LoginViewController.swift */,
+				D5CCEDE92054D47D00BE355B /* LoginConfigurator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -156,6 +170,15 @@
 				D5CCEDDC2054C45200BE355B /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D5CCEDDE2054C5B800BE355B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D5CCEDDF2054C5D600BE355B /* LoginService.swift */,
+				D5CCEDE12054C74400BE355B /* ServiceResponse.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,8 +393,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5CCEDE22054C74400BE355B /* ServiceResponse.swift in Sources */,
+				D5CCEDE02054C5D600BE355B /* LoginService.swift in Sources */,
+				D5CCEDE82054CEB600BE355B /* LoginIteractor.swift in Sources */,
 				D5CCEDDA2054C31800BE355B /* LoginViewController.swift in Sources */,
+				D5CCEDE62054CAE200BE355B /* LoginPresenter.swift in Sources */,
 				D5CCEDB62054B56600BE355B /* AppDelegate.swift in Sources */,
+				D5CCEDEA2054D47D00BE355B /* LoginConfigurator.swift in Sources */,
 				D5CCEDDD2054C45200BE355B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

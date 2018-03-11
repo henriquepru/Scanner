@@ -8,14 +8,19 @@
 
 import UIKit
 
+protocol LoginViewControllerOutPut {
+    func login(username: String, password: String)
+}
+
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var loginButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var output: LoginViewControllerOutPut?
+    
+    func displayError(errorMessage: String) {
+        
     }
 }
