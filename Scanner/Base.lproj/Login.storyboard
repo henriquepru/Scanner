@@ -13,7 +13,7 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Scanner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Scanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,9 +56,6 @@
                                         <state key="normal" title="Cadastrar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="wCG-DF-l8D" kind="show" id="erl-rj-QTP"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -111,12 +108,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="535" y="56"/>
+            <point key="canvasLocation" x="470" y="-220"/>
         </scene>
         <!--Cadastro-->
         <scene sceneID="qLM-zl-6r1">
             <objects>
-                <viewController title="Cadastro" id="wCG-DF-l8D" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" title="Cadastro" id="wCG-DF-l8D" customClass="RegisterViewController" customModule="Scanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3ZX-0P-LCp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,10 +159,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u45-y2-yW4"/>
                     </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="1Eg-fl-TSS" id="OFi-2A-LvS"/>
+                        <outlet property="passwordTextField" destination="2Bn-rT-aKY" id="F5Q-Ka-t2M"/>
+                        <outlet property="registerButton" destination="dX2-2A-GPN" id="4FV-B7-trI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GM7-ni-Z3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375" y="57"/>
+            <point key="canvasLocation" x="470" y="466"/>
         </scene>
     </scenes>
     <resources>

@@ -10,6 +10,7 @@ import UIKit
 
 protocol LoginCoordinatorDelegate {
     func didLogin()
+    func didSelectRegister()
 }
 
 struct LoginCoordinator: Coordinator {
@@ -22,15 +23,22 @@ struct LoginCoordinator: Coordinator {
     }
     
     func start() {
-        let controller = UIStoryboard(name: "Login", bundle: Bundle.main)
-            .instantiateInitialViewController() as? LoginViewController ?? LoginViewController()
+        let controller = LoginViewController.instantiate(from: .login)
         LoginConfigurator.configure(viewController: controller)
         navigation.pushViewController(controller, animated: false)
+    }
+    
+    fileprivate func showRegisterViewController() {
+        
     }
 }
 
 extension LoginCoordinator: LoginCoordinatorDelegate {
     func didLogin() {
         
+    }
+    
+    func didSelectRegister() {
+        showRegisterViewController()
     }
 }

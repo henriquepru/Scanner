@@ -13,7 +13,7 @@ protocol LoginViewControllerOutPut {
 }
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -22,7 +22,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        output?.login(username: "", password: "")
     }
 }
 
@@ -36,5 +35,3 @@ extension LoginViewController {
         
     }
 }
-
-
